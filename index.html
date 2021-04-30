@@ -1,0 +1,75 @@
+<!DOCTYPE HTML><html>
+<head>
+  <title>ESP IOT DASHBOARD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon"  type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+		$(document).ready(function() {
+		$.get("https://my-json-server.typicode.com/jay1384/Test_Json_NodeMCU_01/db", function(data, status){
+			console.log(JSON.stringify(data.posts));
+			/*APPEND START*/
+				$.each(data.posts, function(indx, item) {   
+					$('#mySongs')
+					.append($("<option></option>")
+					.attr("value", item.id)
+					.text(item.title)); 
+				});
+			/*APPEND END*/
+		});
+	});
+  </script>
+</head>
+<body>
+  <div class="topnav">
+    <h1>Piano Learning application</h1>
+  </div>
+  <div class="content">
+  <div id="selectSection" style="margin-bottom:20px">
+	<label>Select song: </label>
+	<select id="mySongs">
+		
+	</select>
+  </div>
+    <div class="card-grid">
+        <div class="card">             
+            <p class="card-title"><i class="fas fa-lightbulb"></i> GPIO 2</p>
+            <label class="switch">
+                <input type="checkbox" onchange="toggleCheckbox(this)" id="2">
+                <span class="slider"></span>
+            </label>
+            <p class ="state">State: <span id="2s"></span></p>
+        </div>
+        <div class="card">
+            <p class="card-title"><i class="fas fa-lightbulb"></i> GPIO 4</p>
+            <label class="switch">
+                <input type="checkbox" onchange="toggleCheckbox(this)" id="4">
+                <span class="slider"></span>
+            </label>
+            <p class ="state">State: <span id="4s"></span></p>
+        </div>
+        <div class="card">
+            <p class="card-title"><i class="fas fa-lightbulb"></i> GPIO 14</p>
+            <label class="switch">
+                <input type="checkbox" onchange="toggleCheckbox(this)" id="14">
+                <span class="slider"></span>
+            </label>
+            <p class ="state">State: <span id="14s"></span></p>
+        </div>
+        <div class="card">
+            <p class="card-title"><i class="fas fa-lightbulb"></i> GPIO 12</p>
+            <label class="switch">
+                <input type="checkbox" onchange="toggleCheckbox(this)" id="12">
+                <span class="slider"></span>
+            </label>
+            <p class="state">State: <span id="12s"></span></p>
+        </div>
+    </div>
+</div>
+<!-- <script src="script.js"></script> -->
+</body>
+</html>
+
+
