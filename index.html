@@ -8,14 +8,14 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
 		$(document).ready(function() {
-		$.get("https://my-json-server.typicode.com/jay1384/Test_Json_NodeMCU_01/db", function(data, status){
-			console.log(JSON.stringify(data.posts));
+		$.get("https://api.npoint.io/30cf4bdbc32afeb9bb67", function(data, status){
+			console.log(JSON.stringify(data.songs[0]));
 			/*APPEND START*/
-				$.each(data.posts, function(indx, item) {   
+				$.each(data.songs, function(indx, song) {   
 					$('#mySongs')
 					.append($("<option></option>")
-					.attr("value", item.id)
-					.text(item.title)); 
+					.attr("value", song.song_name)
+					.text(song.song_name)); 
 				});
 			/*APPEND END*/
 		});
