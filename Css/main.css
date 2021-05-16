@@ -1,0 +1,388 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+}
+
+body, html {
+    background-color: rgb(26, 26, 26);
+    overflow-x: hidden;
+    position: relative;
+}
+
+html::-webkit-scrollbar {
+    width: 0;
+}
+
+.nav {
+    top: 0;
+    z-index: 100000000000000;
+}
+
+.box-control {
+    position: relative;
+    left: 20px;
+    width: 40%;
+    height: 500px;
+    background-color: #cccccc;
+    top: 150px;
+    border-radius: 20px;
+}
+
+.drop-file { 
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 90%;
+    height: 60px;
+    background-color: aqua;
+    left: 40px;
+    margin-top: 50px;
+    top: calc(30% - 25px);
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.6em;
+    font-family: sans-serif;
+}
+
+.drop-file:focus {
+    outline: none;
+}
+
+.slider { 
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 90%;
+    height: 50px;
+    background-color: aqua;
+    margin-left: 40px;
+    margin-top: 50px;
+    top: calc(30% - 25px);
+    text-align: center;
+    font-size: 1.7em;
+    font-family: sans-serif;
+}
+.progressbar { 
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 90%;
+    height: 50px;
+    background-color: aqua;
+    margin: 0 auto;
+    margin-left: 40px;
+    margin-top: 50px;
+    top: calc(30% - 25px);
+}
+
+.boxtwo {
+    position: absolute;
+    right: 20px;
+    width: 40%;
+    height: 500px;
+    background-color: #cccccc;
+    top: 150px;
+    border-radius: 20px;
+}
+
+.relative {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.reset {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.7em;
+    font-family: sans-serif;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.reset:hover {
+    color: blueviolet;
+}
+
+.line, .key {
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+    left: 10%;
+    font-size: 1.6em;
+    color: black;
+    font-family: sans-serif;
+}
+
+.top-line {
+    position: relative;
+    width: 100%;
+    margin-left: 10%;
+}
+
+top {
+    color: coral;
+}
+
+.wrapperhung {
+    position: relative;
+    margin: 0 auto;
+    max-width: 98%;
+    height: 500px;
+    background: aliceblue;
+    top: 200px;
+    border-radius: 20px;
+}
+
+.lycint {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 98%;
+    background-color: bisque;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 300px;
+    top: 20px;
+    font-family: sans-serif;
+    font-size: 1.7em;
+    color: cornflowerblue;
+    align-items: center;
+}
+
+.currentLine {
+    position: relative;
+    top: 100px;
+    width: 98%;
+    background-color: burlywood;
+    margin: 0 auto;
+    height: 50px;
+    color: aliceblue;
+    text-align: center;
+    font-size: 1.8em;
+    font-family: sans-serif;
+}
+
+.pianoImage {
+    position: relative;
+    top: 300px;
+    margin: 0 auto;
+    max-width: 1850px;
+    height: 600px;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+
+.switchBox {
+    position: relative;
+    height: 30px;
+    width: 50px;
+    border-radius: 223.5px;
+    background-color: coral;
+    margin-right: 10px;
+}
+
+.switch {
+    position: relative;
+    top: 3px;
+    left: 3px;
+    background-color: #FFFFFF;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.switched {
+    background-color: coral;
+}
+
+.switched .switch {
+    background-color: aliceblue;
+    left: 23px;
+}
+
+.left, .right {
+    display: flex;
+    margin-top: 5px;
+}
+
+/* Mobile menu */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    z-index: 1000000000000000;
+    text-align: center;
+    color: #03d3fc;
+    font-size: 1.6em;
+    font-family: sans-serif;
+}
+
+.name {
+    padding-top: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.box-stick {
+    position: absolute;
+    background-color: inherit;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 10px;
+}
+
+.play, .continue {
+    color: coral;
+    margin-left: 15%;
+    margin-bottom: 50px;
+    transition: 0.4s;
+}
+
+.play:hover {
+    color: cornflowerblue;
+    transform: scale(1.2);
+}
+
+.continue:hover {
+    color: cornflowerblue;
+    transform: rotate(360deg) scale(1.2);
+}
+
+#sckone, #scktwo, #sckthree {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #FFFFFF;
+    transition: 0.4s;
+    display: block;
+}
+
+#sckone {
+    top: 0;
+}
+
+#scktwo {
+    top: calc(50% - 1.5px);
+}
+
+#sckthree {
+    bottom: 0;
+}
+
+.box-stick:hover #sckone {
+    background-color: #03d3fc;
+}
+
+.box-stick:hover #scktwo {
+    background-color: #03d3fc;
+}
+
+.box-stick:hover #sckthree {
+    background-color: #03d3fc;
+}
+
+.menuBox {
+    position: fixed;
+    left: -100%;
+    width: 100%;
+    top: 60px;
+    height: 100%;
+    background-color: black;
+    z-index: 1000000000000000;
+    transition: 0.4s;
+}
+
+.listElem {
+    width: 100%;
+}
+
+.listElem .easer-black-right-li {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.menuOp { left: 0; }
+.opened #sckone {
+    top: 20px;
+    transform: rotate(-45deg);
+}
+
+.opened #scktwo {
+    top: 20px;
+    transform: rotate(45deg);
+}
+
+.opened #sckthree {
+    transform: scale(0);
+}
+
+@media screen and (max-width: 1190px) {
+    .progressbar {
+        margin-left: 10px;
+    }
+
+    .drop-file {
+        left: 10px;
+    }
+
+    .slider {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 811px) {
+    .boxtwo {
+        top: 700px;
+        width: 100%;
+        margin: 0;
+        right: 0;
+    }
+    
+    .box-control {
+        width: 100%;
+        margin: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .wrapperhung {
+        top: 800px;
+        width: 100%;
+        margin: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .pianoImage {
+        top: 900px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 587px) {
+    .nav { display: none; visibility: hidden; }
+}
+
+@media screen and (min-width: 588px) {
+    .menu {
+        display: none;
+        visibility: hidden;
+    }
+}
